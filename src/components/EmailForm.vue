@@ -1,9 +1,17 @@
 <script>
 import emailjs from "emailjs-com";
+import db from "@/fb";
+import { doc, getDoc } from "firebase/firestore";
+
 export default {
   name: "ContactUs",
   data() {
     return {
+      contact: {
+        email:'',
+        number:'',
+        address:''
+      },
       name: "",
       email: "",
       message: "",
@@ -15,23 +23,39 @@ export default {
   },
   methods: {
     sendEmail() {
-        emailjs
-          .sendForm(
-            "service_y4srkj9",
-            "template_egbrprv",
-            this.$refs.form,
-            "nSRwtB2qhhCD-T4vY"
-          )
-          .then(
-            (result) => {
-              console.log("SUCCESS!", result.text);
-              this.snackbar = true;
-            },
-            (error) => {
-              console.log("FAILED...", error.text);
-            }
-          );
+      emailjs
+        .sendForm(
+          "service_y4srkj9",
+          "template_egbrprv",
+          this.$refs.form,
+          "nSRwtB2qhhCD-T4vY"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.text);
+            this.snackbar = true;
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
     },
+    async getData() {
+      const docRef = doc(db, "contacts", "GGCwh7oCyWb7rxhQmXWP");
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        this.contact = docSnap.data();
+      }
+    },
+  },
+  computed: {
+    realContacts() {
+      return this.contact;
+    },
+  },
+  created() {
+    this.getData();
   },
 };
 </script>
@@ -41,21 +65,31 @@ export default {
     <v-list class="ma-5 text-h5">
       <v-list-item>
         <v-icon icon="mdi-email-outline"></v-icon> Email:
-        attilatelekdr@gmail.com
+        {{ realContacts.email }}
       </v-list-item>
       <v-list-item>
-        <v-icon icon="mdi-cellphone"></v-icon> Phone number +36702325532
+        <v-icon icon="mdi-cellphone"></v-icon> Phone number
+        {{ realContacts.number }}
       </v-list-item>
       <v-list-item>
-        <v-icon icon="mdi-map-marker" /> Location of lessons: Budapest, Kondorfa
-        u. 2, 1116
+        <v-icon icon="mdi-map-marker" /> Location of lessons:
+        {{ realContacts.address }}
       </v-list-item>
     </v-list>
 
     <v-card>
+      <v-card-title class="ma-5 text-h5 d-flex justify-center">
+        Contact form
+      </v-card-title>
       <div class="container">
         <form class="px-3" ref="form" @submit.prevent="sendEmail">
-          <v-snackbar class="d-flex justify-center text-center" v-model="snackbar" :timeout="4000" color="indigo-darken-1" location="top">
+          <v-snackbar
+            class="d-flex justify-center text-center"
+            v-model="snackbar"
+            :timeout="4000"
+            color="indigo-darken-1"
+            location="top"
+          >
             <span>The message was sent succesfully</span>
           </v-snackbar>
           <label>Name</label>

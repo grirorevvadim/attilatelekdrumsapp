@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Navigation/>
+    <Navigation />
     <v-content>
       <v-container fluid class="pa-0">
         <v-card class="tabs" fluid>
@@ -23,7 +23,9 @@
               <v-window-item value="one">
                 <!-- <img :src="imgUrl"/> -->
                 <v-img cover class="mb-10" src="@/assets/AttilaTelekDrums.webp">
-                  <h1 class="pa-5 text-h3 text-right text-white mb-15 font-weight-light">
+                  <h1
+                    class="pa-5 text-h3 text-right text-white mb-15 font-weight-light"
+                  >
                     Welcome at AttilaTelekDrums.com
                   </h1>
                   <h2 class="text-h6 pr-4 text-white text-right">
@@ -57,17 +59,17 @@
               </v-window-item>
 
               <v-window-item value="two">
-                <Story/>
+                <Story />
               </v-window-item>
 
               <v-window-item value="three">
-                <Music/>
+                <Music />
               </v-window-item>
               <v-window-item value="four">
-                <Feedback/>
+                <Feedback />
               </v-window-item>
               <v-window-item value="five">
-                  <Lessons @someEvent="setTab"></Lessons>
+                <Lessons @someEvent="setTab"></Lessons>
               </v-window-item>
               <v-window-item value="six">
                 <EmailForm></EmailForm>
@@ -77,7 +79,7 @@
         </v-card>
       </v-container>
     </v-content>
-    <Footer/>
+    <Footer />
   </v-app>
 </template>
 
@@ -89,16 +91,21 @@ import Feedback from "@/components/Feedback.vue";
 import Story from "@/components/Story.vue";
 import Music from "@/components/Music.vue";
 import Lessons from "@/components/Lessons.vue";
-import { computed, reactive, ref, watch } from "vue";
+import { computed, onMounted, reactive, ref, watch } from "vue";
 import imgUrl from "@/assets/AttilaTelekDrums.webp";
 let tab = ref(null);
 const selectedTab = computed(() => {});
-function setTab(){
-  tab.value = 'six';
+function setTab() {
+  tab.value = "six";
 }
 watch(tab, (newX) => {
-  console.log(`x is ${newX}`)
-})
+  console.log(`x is ${newX}`);
+  sessionStorage.setItem("key", newX);
+});
+onMounted(() => {
+  if (sessionStorage.getItem("key")) tab.value = sessionStorage.getItem("key");
+  else tab.value = "one";
+});
 </script>
 
 <style>
