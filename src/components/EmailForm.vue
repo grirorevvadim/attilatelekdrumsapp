@@ -62,7 +62,7 @@ export default {
 
 <template>
   <v-container>
-    <v-list class="ma-5 text-h5">
+    <v-list class="ma-5 customFont">
       <v-list-item>
         <v-icon icon="mdi-email-outline"></v-icon> Email:
         {{ realContacts.email }}
@@ -78,7 +78,7 @@ export default {
     </v-list>
 
     <v-card>
-      <v-card-title class="ma-5 text-h5 d-flex justify-center">
+      <v-card-title class="ma-5 customFont d-flex justify-center">
         Contact form
       </v-card-title>
       <div class="container">

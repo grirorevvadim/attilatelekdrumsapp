@@ -1,25 +1,25 @@
 <template>
   <v-content>
     <v-container>
-      <header class="ma-5 text-h4 font-weight-bold">
+      <header class="ma-5 customFontTitle font-weight-bold">
         Feedbacks written by students and artists
       </header>
 
-      <p class="ma-5 text-h5">
+      <p class="ma-5 customFont">
         During my career I have received different feedbacks from different
         students and artist.
       </p>
-      <p class="ma-5 text-h5">Here are a few of them:</p>
+      <p class="ma-5 customFont">Here are a few of them:</p>
       <v-list v-for="i in data" :key="i.id">
         <v-list-item>
           <v-layout>
             <!-- <v-spacer /> -->
-            <v-flex class="ml-3 text-subtitle-1" style="max-width: 70%">
+            <v-flex class="ml-3 customFont" style="max-width: 70%">
               <div class="text-form">
                 <v-sheet :elevation="3" border rounded>
-                  <h3 class="ml-2 text-h4">{{ i.name }}</h3>
-                  <v-chip class="ml-2 text-subtitle-1">{{ i.title }}</v-chip>
-                  <h5 class="pa-3 text-body-1 text-justify">
+                  <h3 class="ml-2 customFont">{{ i.name }}</h3>
+                  <v-chip class="ml-2 customFont">{{ i.title }}</v-chip>
+                  <h5 class="pa-3 customFont text-justify">
                     {{ i.feedback }}
                   </h5>
                 </v-sheet>

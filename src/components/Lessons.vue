@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="text-h5">
+    <div class="customFont">
       <p>
         All the drum lessons are personalized depending on the student's goals
         and skills.
@@ -25,7 +25,7 @@
         </tr>
       </tbody>
     </v-table>
-    <div class="text-h5">
+    <div class="customFont">
       <p class="mt-5">
         The drum lessons are not only for adults but children as well, from
         beginners to advanced drummers. With the help of the drum teaching

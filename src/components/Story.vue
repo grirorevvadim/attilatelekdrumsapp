@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <div class="text-h6 px-16 mb-10 font-weight-light text-justify">
-      <header class="mb-4 text-h4 font-weight-bold">My Story</header>
+    <div class="customFont px-16 mb-10 font-weight-light text-justify">
+      <header class="mb-4 customFontTitle font-weight-bold">My Story</header>
       <div class="story-flex-container">
         <div class="mr-8 story-flex-item">
-          <div class="text-body-1">
+          <div class="customFont">
             I started to play drums back in 2008. My first teacher was Daniel
             Ocsovay and his son Adrian who helped me to make my first steps as a
             drummer. After a few months I've decided to join a primary music
@@ -18,13 +18,13 @@
             of the well known guitarist Mohai Tamás.
           </div>
 
-          <div class="text-body-1 mt-3">
+          <div class="customFont mt-3">
             After finishing high school I moved to Budapest, to improve my
             drumming skills and study at Bartók Béla conservatory. Moving to
             Budapest was one of my best decisions in my life as this gave me the
             opportunity to join many amazing bands.
           </div>
-          <div class="mt-3 text-body-1">
+          <div class="mt-3 customFont">
             One of my dreams was to study in the United States as well, so in
             2018 I went to Los Angeles to join a summer program at the school
             Musicians Institute where I was able to take lessons from the best
