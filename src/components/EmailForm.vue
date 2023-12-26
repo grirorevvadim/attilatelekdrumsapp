@@ -14,6 +14,7 @@ export default {
       },
       name: "",
       email: "",
+      phone:"",
       message: "",
       inputRules: [
         (v) => v.length <= 1000 || "Maximum length is 1000 characters",
@@ -64,22 +65,22 @@ export default {
   <v-container>
     <v-list class="ma-5 customFont">
       <v-list-item>
-        <v-icon icon="mdi-email-outline"></v-icon> Email:
+        <v-icon icon="mdi-email-outline"></v-icon> {{ $t("contact.email") }}:
         {{ realContacts.email }}
       </v-list-item>
       <v-list-item>
-        <v-icon icon="mdi-cellphone"></v-icon> Phone number
+        <v-icon icon="mdi-cellphone"></v-icon> {{ $t("contact.phone") }}
         {{ realContacts.number }}
       </v-list-item>
       <v-list-item>
-        <v-icon icon="mdi-map-marker" /> Location of lessons:
+        <v-icon icon="mdi-map-marker" /> {{ $t("contact.location") }}:
         {{ realContacts.address }}
       </v-list-item>
     </v-list>
 
     <v-card>
       <v-card-title class="ma-5 customFont d-flex justify-center">
-        Contact form
+        {{ $t("contact.form") }}
       </v-card-title>
       <div class="container">
         <form class="px-3" ref="form" @submit.prevent="sendEmail">
@@ -92,26 +93,32 @@ export default {
           >
             <span>The message was sent succesfully</span>
           </v-snackbar>
-          <label>Name</label>
           <v-text-field
             maxlength="15"
             required
             type="text"
             v-model="name"
             name="name"
-            placeholder="Your Name"
+            :placeholder="$t('contact.name')"
             :rules="inputRules"
           />
-          <label>Email</label>
+          <v-text-field
+            maxlength="15"
+            required
+            type="number"
+            hide-spin-buttons
+            v-model="phone"
+            name="phone"
+            :placeholder="$t('contact.phone')"
+          />
           <v-text-field
             maxlength="50"
             required
             type="email"
             v-model="email"
             name="email"
-            placeholder="Your Email"
+            :placeholder="$t('contact.email')"
           />
-          <label>Message</label>
           <v-textarea
             name="message"
             v-model="message"
@@ -120,11 +127,11 @@ export default {
             maxlength="1000"
             required
             :rules="inputRules"
-            placeholder="Message"
+            :placeholder="$t('contact.message')"
           >
           </v-textarea>
 
-          <v-text-field class="submit" type="submit" value="Send" />
+          <v-text-field class="submit" type="submit" :value="$t('contact.submit')" />
         </form>
       </div>
     </v-card>

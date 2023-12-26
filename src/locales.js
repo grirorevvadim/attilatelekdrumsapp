@@ -1,0 +1,118 @@
+const messages = {
+  en: {
+    message: {
+      homeTab: "Home",
+      storyTab: "My Story",
+      musicTab: "Music",
+      feedbackTab: "Feedbacks",
+      lessonsTab: "Drum Lessons - Prices",
+      contactTab: "Contact",
+      welcome: "Welcome at AttilaTelekDrums.com",
+      welcomeSub:
+        "Drummer of Paulina, Flanger Kids, Böbe, Chameleon Jazz Band, Macskin Dávid Trió, perpētuum and more.",
+      about: "About Me",
+      aboutText:
+        "My name is Attila Telek and I'm a professional session drummer. I started to play drums in 2008 and since then it became a true passion. I finished my music studies at Bartók Béla Conservatory in Budapest and after that I took courses from the best drum teachers in Los Angeles and New York. My goal is to introduce music to my students through drums not only as a listener but as an active member of the music.",
+      location: "Location of the drum lessons",
+      myStory:"My Story",
+      storyOne:"I started to play drums back in 2008. My first teacher was Daniel Ocsovay and his son Adrian who helped me to make my first steps as a drummer. After a few months I've decided to join a primary music school in Slovakia as I'm originaly from Kalonda (SK) and we created with two of my friends our first band which was called Tyger. I started to feel that drums are becoming my passion so I moved to Hungary to study at the school Hang-Szín-Tér in Bodajk. After the first year I received the \"Musician of the year\" award in my school which motivated me a lot in the next upcoming years. In the third year of the school I was already invited to play a song on the album of the well known guitarist Mohai Tamás.",
+      storyTwo:"After finishing high school I moved to Budapest, to improve my drumming skills and study at Bartók Béla conservatory. Moving to Budapest was one of my best decisions in my life as this gave me the opportunity to join many amazing bands.",
+      storyThree:"One of my dreams was to study in the United States as well, so in 2018 I went to Los Angeles to join a summer program at the school Musicians Institute where I was able to take lessons from the best drum teachers in the school. This kept me going, and in 2019 I attended a music program in New York at the Collective school of music. I believe that all these decisions helped me to grow as a musician and be able to create my own studio as well. Curretly I'm working as an active session drummer and drum teacher, and I have already performed in the biggest festivals in Hungary like Sziget, EFOTT, etc., and I also had the possibility to play a concert in the Papp László Sport aréna. I believe that with my experience I will be able to help to improve my students drumming skills and introduce music through the drum set.",    
+      myMusic:"Music",
+      musicText:"Thankfully I was able to record and perform during the past years with many different artists not only in my own studio, but also in TV shows and different concerts. Scroll down and get to know more about my work.",
+      musicStoryOneTitle:"Paulina Studioconcert Petőfi LIVE!",
+      musicStoryTwoTitle:"Chameleon Jazz Band Window to my soul",
+      musicStoryThreeTitle:"Fazekas Eszter - Véletlen at Soundcam productions",
+      musicStoryFourTitle:"Attila Telek - We're Good",
+      musicStoryOne:"The girl who started to use TikTok one year ago, and today the whole country knows her! Paulina brought her most known songs to the studio concert - and her guest will be Tarján Zsófi from Honeybeast!",
+      musicStoryTwo:"The Chameleon Jazz Band performed for the first time the song Window to my soul in the morning show called \"Család Barát\" in the Duna TV.",
+      musicStoryThree:"Fazekas Eszter brought her first song \"Véletlen\" to the Friday sessions which is produced by the Soundcam Productions.",
+      musicStoryFour:"A drum cover of Dua Lipa's song \"We're Good\" recorded in my own studio with 7 microphones and Studio One 5 DAW.",
+
+    },
+    feedback:{
+      title:"Feedbacks written by students and artists",
+      subtitle:"During my career I have received different feedbacks from different students and artist.",
+      listTitle:"Here are a few of them:",
+      feedbackOneTitle:"ex student at the school of art in Dombóvár",
+      feedbackOne:"I have met a good teacher and person in Attila. The drum classes were in a very good mood,I was able to learn many new techniques and styles. I was also happy to get to know his work and his bands better. I really liked to attend the drum lessons every time.",
+      feedbackTwoTitle:"trumpet artist - teacher",
+      feedbackTwo:"I am very lucky to be able to work with Attila for 2 years now. The precision and virtuosity of his playing makes him one of the best of his generation. His musical openness, hard work, humor and reliability makes the common work very smooth and enjoyable. These qualities are the greatest of a music teacher. Everyone, from beginners to professional drummers, can contact him with confidence, because his knowledge and stage routine provides a good basis for the studies.",
+    },
+    lessons:{
+      title:"All the drum lessons are personalized depending on the student's goals and skills.",
+      variants:"If you liked the lesson and you would like to continue, you can select between 30, 45, 60 or 90 minutes long lessons.",
+      description:"The drum lessons are not only for adults but children as well, from beginners to advanced drummers. With the help of the drum teaching materials collected over the years I will help you to build a confident drum technique, improve your creativity and teach how to be a stable band member.",
+      contact:"If you are interested, contact me and let's get started with the first lesson.",      
+      contactMe:"Contact"  
+    },
+    contact:{
+      email:"Email",
+      phone:"Phone",
+      location:"Location of lessons",
+      form:"Contact form",
+      name:"Name",
+      phone:"Phone(Optional)",
+      message:"Type your message here...",
+      submit:"Submit"
+    },
+  },
+  hu: {
+    message: {
+      homeTab: "Kezdőlap",
+      storyTab: "Rólam",
+      musicTab: "Zene",
+      feedbackTab: "Visszajelzések",
+      lessonsTab: "Doboktatás - Árak",
+      contactTab: "Kapcsolat",
+      welcome: "Üdvözöljük az AttilaTelekDrums.com oldalon",
+      welcomeSub:
+        "Paulina , Flanger Kids, Böbe, Chameleon Jazz Band, Macskin Dávid Trió, perpētuum és egyéb zenekarok dobosa.",
+      about: "RÓLAM",
+      aboutText:
+        "A nevem Telek Attila és 2008 óta foglalkozom dobolással ami mára igazi szenvedélyemmé vált. Zenei tanulmányaimat a budapesti Bartók Béla Konzervatóriumban végeztem, majd Los Angelesben és New Yorkban a legjobb dobtanároktól volt szerencsém dobórákat venni. Célom, hogy ne csak hallgatóként, hanem a zene aktív tagjaként is megismertessem diákjaimmal a zenét a dobolás által.",
+      location: "A dobórák helyszíne",
+      myStory:"A történetem",
+      storyOne:"2008-ban kezdtem el dobolni. Első tanárom Ocsovay Dániel és fia, Adrián volt, akik segítettek megtenni az első lépéseket dobosként. Néhány hónap után úgy döntöttem, hogy csatlakozom egy szlovákiai általános zeneiskolába mivel eredetileg Kalondáról (SK) származom. Nem sokkal ezután két barátommal létrehoztuk az első zenekarunkat, amely a Tyger névre hallgatott. Kezdtem úgy érezni, hogy a dob a szenvedélyemmé válik, ezért szüleim támogatásával Magyarországra költöztem, hogy a Bodajki Hang-Szín-Tér iskolában tanuljak. Az első év után megkaptam az év zenésze díjat, sok motivációt adott az elkövetkező években. Az iskola harmadik évében már meghívást kaptam egy dal erejére az ismert gitáros, Mohai Tamás albumára is.",
+      storyTwo:"A középiskola befejezése után Budapesten a Bartók Béla Konzervatóriumban folytattam tanulmányaimat, ami jó döntésnek bizonyult azért is, mert ez lehetőséget adott, hogy kiváló bandákhoz csatlakozzak.",
+      storyThree:"Egyik álmom az volt, hogy az Egyesült Államokban is tanuljak, így 2018-ban elmentem Los Angelesbe, hogy csatlakozzak egy nyári programhoz a Musicians Institute-ban, ahol az iskola legjobb dobtanáraitól vehettem leckéket. Mivel hatalmas élményekkel gazdagodtam, ezért 2019-ben részt vettem egy zenei programon New Yorkban a Collective School of Music-ban is. Úgy gondolom, hogy mindezek a döntések segítettek abban, hogy zenészként fejlődjek, és egy saját stúdiót is létrehozhassak. Jelenleg aktív session-dobosként és dobtanárként dolgozom, és felléptem már Magyarország legnagyobb fesztiváljain, mint pl. a Sziget vagy az EFOTT valamint lehetőségem volt koncertezni a Papp László Sportarénában is. Bízom abban, hogy tapasztalataimmal képes leszek segíteni diákjaim dobkészségének fejlesztését és megismertetni a zenét a dobfelszerelésen keresztül is.",
+      myMusic:"Zene",
+      musicText:"Szerencsére az elmúlt években sokféle előadóval léphettem fel és dolgozhattam nem csak a saját stúdiómban, hanem tévéműsorokban és különböző koncerteken is. Görgess le, és tudj meg többet a munkámról.",
+      musicStoryOneTitle:"Paulina Stúdiókoncert Petőfi Live!",
+      musicStoryTwoTitle:"Chameleon Jazz Band Window to my Soul",
+      musicStoryThreeTitle:"Fazekas Eszter - Véletlen at Soundcam productions",
+      musicStoryFourTitle:"Telek Attila - We're Good Drum Cover",
+      musicStoryOne:"A lány, aki egy éve kezdte használni a TikTok-ot, és ma már az egész ország ismeri! Paulina a legismertebb dalait hozta el a stúdiókoncertre - vendége pedig Tarján Zsófi lesz a Honeybeastből!",
+      musicStoryTwo:"A Chameleon Jazz Band a Duna TV Barát Család című reggeli műsorában adta elő először a Window to my soul című dalt.",
+      musicStoryThree:"Fazekas Eszter első, Véletlen című dalát hozta el a Friday sessions-be, melynek megálmodója a Soundcam Productions.",
+      musicStoryFour:"Dua Lipa We're Good című dalának dobfeldolgozása, amelyet a saját stúdiómban rögzítettem 7 mikrofonnal és egy Studio One 5 DAW-val.",
+    },
+    feedback:{
+      title:"Diákok és zenészek által írt visszajelzések",
+      subtitle:"A karrierem során különböző visszajelzéseket kaptam diákoktól és előadóktól/kollégáktól egyaránt.",
+      listTitle:"Íme néhány.",
+      feedbackOneTitle:"régi diák a Dombóvári zeneiskolából",
+      feedbackOne:"Attilában egy jó tanárt és embert ismertem meg. Nagyon jó hangulatban teltek a dobórák, sok új technikát és stílust tanulhattam. Annak is örültem, hogy megismerhettem jobban a munkásságát és a zenekarait is. Örömmel mentem be minden alkalommal a dobórákra.",
+      feedbackTwoTitle:"trombitaművész-tanár",
+      feedbackTwo:"Nagyon szerencsés vagyok, hogy immár 2 éve dolgozhatok Telek Attilával. Játékának pontossága, virtuozitása generációjának legjobbjai közé emelik. Zenei és szellemi nyitottsága, szorgalma, humora és emberi megbízhatósága nagyon gördülékennyé és élvezetessé teszik a közös munkát. Ezek a kvalitások azok melyek egy zenetanár legnagyobb erényei. A kezdő szinttől a hivatásos dobosokig bátran fordulhat hozzá mindenki, mivel képzettsége és színpadi rutinja jó alapot ad a közös tanulmányoknak.",
+    },
+    lessons:{
+      title:"Minden dobóra személyre szabott, a tanuló céljaitól és képességeitől függően.",
+      variants:"Ha tetszett a lecke, és folytatni szeretnéd, választhatsz 30, 45, 60 vagy 90 perces órák közül.",
+      description:"A doboktatás nem csak felnőtteknek szól, hanem gyerekeknek is, a kezdőtől a haladó dobosig. Az évek során összegyűjtött doboktatási anyagok segítségével hozzájárulok a magabiztos dobtechnika elsajátításához, a kreativitás fejlesztéséhez, és megtanítom, hogyan legyünk stabil zenekari tagok.",
+      contact:"Ha felkeltettem érdeklődésed, fordulj hozzám bizalommal és kezdjük az első leckével.",
+      contactMe:"Kapcsolat"      
+    },
+    contact:{
+      email:"E-mail",
+      phone:"Telefon",
+      location:"Az órák helyszíne",
+      form:"Kapcsolatfelvételi űrlap",
+      name:"Név",
+      phone:"Telefonszám (opcionális)",
+      message:"Írja be üzenetét ide...",
+      submit:"Beküldés"
+    },
+  },
+};
+export default messages;

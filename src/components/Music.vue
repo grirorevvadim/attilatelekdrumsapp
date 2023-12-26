@@ -1,11 +1,11 @@
 <template>
   <v-container>
-    <div class="ma-5 customFontTitle font-weight-bold text-center">Music</div>
+    <div class="ma-5 customFontTitle font-weight-bold text-center">
+      {{ $t("message.myMusic") }}
+    </div>
     <div class="customFont font-weight-light">
       <p>
-        Thankfully I was able to record and perform during the past years with
-        many different artists not only in my own studio, but also in TV shows
-        and different concerts. Scroll down and get to know more about my work.
+        {{ $t("message.musicText") }}
       </p>
     </div>
     <v-flex class="pa-10 flex-container-video">
@@ -16,16 +16,16 @@
         />
       </v-flex>
       <v-sheet class="w-50 d-flex flex-wrap">
-        <v-sheet class="customFontTitle font-weight-light flex-1-0 ma-2 pa-2 text-center">
-          Paulina Studioconcert <br> Petőfi LIVE!
+        <v-sheet
+          class="customFontTitle font-weight-light flex-1-0 ma-2 pa-2 text-center"
+        >
+          {{ $t("message.musicStoryOneTitle") }}
         </v-sheet>
 
         <v-sheet
           class="customFont font-weight-light flex-1-1-100 ma-2 pa-2 text-justify"
         >
-          The girl who started to use TikTok one year ago, and today the whole
-          country knows her! Paulina brought her most known songs to the studio
-          concert - and her guest will be Tarján Zsófi from Honeybeast!
+          {{ $t("message.musicStoryOne") }}
         </v-sheet>
       </v-sheet>
     </v-flex>
@@ -34,14 +34,13 @@
     <v-flex class="pa-10 flex-container-video">
       <v-sheet class="w-50 d-flex flex-wrap">
         <v-sheet class="customFontTitle font-weight-light text-center">
-          Chameleon Jazz Band Window to my soul
+          {{ $t("message.musicStoryTwoTitle") }}
         </v-sheet>
 
         <v-sheet
           class="customFont font-weight-light flex-1-1-100 ma-2 pa-2 text-justify"
         >
-          The Chameleon Jazz Band performed for the first time the song Window
-          to my soul in the morning show called "Család Barát" in the Duna TV.
+          {{ $t("message.musicStoryTwo") }}
         </v-sheet>
       </v-sheet>
       <v-sheet class="video">
@@ -61,14 +60,13 @@
       </v-sheet>
       <v-sheet class="w-50 d-flex flex-wrap">
         <v-sheet class="customFontTitle font-weight-light text-center">
-          Fazekas Eszter - Véletlen at Soundcam productions
+          {{ $t("message.musicStoryThreeTitle") }}
         </v-sheet>
 
         <v-sheet
           class="customFont font-weight-light flex-1-1-100 ma-2 pa-2 text-justify"
         >
-          Fazekas Eszter brought her first song "Véletlen" to the Friday
-          sessions which is produced by the Soundcam Productions.
+          {{ $t("message.musicStoryThree") }}
         </v-sheet>
       </v-sheet>
     </v-flex>
@@ -76,14 +74,13 @@
     <v-sheet class="pa-10 d-flex flex-container-video">
       <v-sheet class="w-50 flex-wrap text-center">
         <v-sheet class="customFontTitle font-weight-light">
-          Attila Telek - We're Good
+          {{ $t("message.musicStoryFourTitle") }}
         </v-sheet>
 
         <v-sheet
           class="customFont font-weight-light flex-1-1-100 ma-2 pa-2 text-justify"
         >
-          A drum cover of Dua Lipa's song "We're Good" recorded in my own studio
-          with 7 microphones and Studio One 5 DAW.
+          {{ $t("message.musicStoryFour") }}
         </v-sheet>
       </v-sheet>
       <v-sheet class="video">

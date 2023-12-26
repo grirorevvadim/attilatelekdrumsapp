@@ -12,7 +12,7 @@
                   value="one"
                   v-bind="props"
                   :color="isHovering ? 'white' : undefined"
-                  >Home</v-tab
+                  >{{ $t("message.homeTab") }}</v-tab
                 >
               </template>
             </v-hover>
@@ -24,7 +24,7 @@
                   value="two"
                   v-bind="props"
                   :color="isHovering ? 'white' : undefined"
-                  >My Story</v-tab
+                  >{{ $t("message.storyTab") }}</v-tab
                 ></template
               ></v-hover>
             <v-hover>
@@ -34,7 +34,7 @@
                   value="three"
                   v-bind="props"
                   :color="isHovering ? 'white' : undefined"
-                  >Music</v-tab
+                  >{{ $t("message.musicTab") }}</v-tab
                 >
               </template></v-hover
             >
@@ -46,7 +46,7 @@
                   value="four"
                   v-bind="props"
                   :color="isHovering ? 'white' : undefined"
-                  >Feedbacks</v-tab
+                  >{{ $t("message.feedbackTab") }}</v-tab
                 >
               </template></v-hover
             >
@@ -58,7 +58,7 @@
                   value="five"
                   v-bind="props"
                   :color="isHovering ? 'white' : undefined"
-                  >Drum Lessons - Prices</v-tab
+                  >{{ $t("message.lessonsTab") }}</v-tab
                 >
               </template></v-hover
             >
@@ -70,7 +70,7 @@
                   value="six"
                   v-bind="props"
                   :color="isHovering ? 'white' : undefined"
-                  >Contact</v-tab
+                  >{{ $t("message.contactTab") }}</v-tab
                 >
               </template></v-hover
             >
@@ -84,17 +84,16 @@
                   <h1
                     class="pa-5 customFontTitle text-right text-white mb-15 font-weight-light"
                   >
-                    Welcome at AttilaTelekDrums.com
+                    {{ $t("message.welcome") }}
                   </h1>
                   <h2 class="customFont pr-4 text-white text-right">
-                    Drummer of Paulina, Flanger Kids, Böbe, Chameleon Jazz Band,
-                    Macskin Dávid Trió, perpētuum and more.
+                    {{ $t("message.welcomeSub") }}
                   </h2></v-img
                 >
 
                 <div class="pb-10" style="background-color: rgb(217, 223, 255)">
                   <h2 class="pt-10 customFontTitle text-center pb-3">
-                    About Me
+                    {{ $t("message.about") }}
                   </h2>
                   <h3
                     class="customFont px-16 mb-10 font-weight-light text-justify"
@@ -105,17 +104,11 @@
                       margin: auto;
                     "
                   >
-                    My name is Attila Telek and I'm a professional session
-                    drummer. I started to play drums in 2008 and since then it
-                    became a true passion. I finished my music studies at Bartók
-                    Béla Conservatory in Budapest and after that I took courses
-                    from the best drum teachers in Los Angeles and New York. My
-                    goal is to introduce music to my students through drums not
-                    only as a listener but as an active member of the music.
+                    {{ $t("message.aboutText") }}
                   </h3>
                 </div>
                 <h2 class="customFontTitle text-center pb-3">
-                  Location of the drum lessons
+                  {{ $t("message.location") }}
                 </h2>
                 <div class="mb-10 mt-10" >
                   <a href="https://maps.app.goo.gl/GkEsbcHFu4H9Tao77">

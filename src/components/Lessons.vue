@@ -2,12 +2,10 @@
   <v-container>
     <div class="customFont">
       <p>
-        All the drum lessons are personalized depending on the student's goals
-        and skills.
+        {{ $t("lessons.title") }}
       </p>
       <p>
-        If you liked the lesson and you would like to continue, you can select
-        between 30, 45, 60 or 90 minutes long lessons.
+        {{ $t("lessons.variants") }}
       </p>
     </div>
 
@@ -27,17 +25,14 @@
     </v-table>
     <div class="customFont">
       <p class="mt-5">
-        The drum lessons are not only for adults but children as well, from
-        beginners to advanced drummers. With the help of the drum teaching
-        materials collected over the years I will help you to build a confident
-        drum technique, improve your creativity and teach how to be a stable
-        band member.
+        {{ $t("lessons.description") }}
       </p>
       <p class="mt-5">
-        If you are interested, contact me and let's get started with the first
-        lesson.
-        <v-btn @click="$emit('someEvent')">Go To Contact Form</v-btn>
+        {{ $t("lessons.contact") }}
       </p>
+    </div>
+    <div class="contactButton">
+      <v-btn class="button" color="indigo-darken-4" size="large" @click="$emit('someEvent')">{{ $t("lessons.contactMe") }}</v-btn>
     </div>
   </v-container>
 </template>
@@ -73,4 +68,10 @@ export default {
 </script>
 
 <style>
+.contactButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 </style>
