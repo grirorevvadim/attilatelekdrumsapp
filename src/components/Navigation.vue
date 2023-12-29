@@ -10,35 +10,48 @@
         >Attila Telek Drums</span
       >
       <v-spacer></v-spacer>
-      <v-select class="select" :items="locales" v-model="$i18n.locale">
-      </v-select>
+      <div class="select">
+        <v-select
+        class="select"
+          v-model="selectedLanguage"
+          :items="supportedLanguages"
+          item-title="name"
+          item-value="code"
+          @update:menu="changeLanguage"
+        >
+        </v-select>
+      </div>
     </v-toolbar>
   </nav>
 </template>
 
 <script >
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 export default {
   data() {
     return {
+      selectedLanguage: this.$i18n.locale,
+      supportedLanguages: [
+        { name: "English", code: "en" },
+        { name: "Magyar", code: "hu" },
+      ],
+
       selectedItem: null,
-      dLevels: [
-        { id: 1, value: 1, description: "Level1" },
-        { id: 2, value: 2, description: "Level2" },
-      ],
-      langs: [
-        { lang: "hu", image: "@/assets/flags/hu.png" },
-        { lang: "en", image: "@/assets/flags/en.png" },
-      ],
-      locales:['hu','en'],
     };
+  },
+  methods: {
+    changeLanguage() {
+      console.log("in change lang");
+      this.$i18n.locale = this.selectedLanguage;
+    },
   },
 };
 </script>
 
 <style>
 .select {
-  width: 10%;
-  max-width: 10%;
+  width: 20%;
+  max-width: 20%;
   display: contents;
 }
 </style>
